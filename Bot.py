@@ -6,7 +6,7 @@ init(autoreset=True)
 SIFRE = "1234"
 
 # JSON dosyalarından komutları ve araçları yükle
-def json_oku(dosya_adi):
+def json_oku(py_kodları.json):
     try:
         with open(dosya_adi, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -23,7 +23,7 @@ python_araclari = json_oku("py_araçları.json")
 def sifre_kontrol():
     for hak in range(3):
         girilen = input(Fore.YELLOW + "Lütfen şifreni gir: ")
-        if girilen == SIFRE:
+        if girilen == SIFRE:+!!!+_
             print(Fore.GREEN + "Giriş başarılı! Hoş geldin.")
             return True
         else:
