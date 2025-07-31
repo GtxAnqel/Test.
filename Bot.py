@@ -6,7 +6,7 @@ init(autoreset=True)
 SIFRE = "1234"
 
 # JSON dosyalarından komutları ve araçları yükle
-def json_oku(py_kodları.json):
+def json_oku(dosya_adi):
     try:
         with open(dosya_adi, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -17,13 +17,21 @@ def json_oku(py_kodları.json):
         print(Fore.RED + f"{dosya_adi} dosyası okunurken hata oluştu, boş sözlük olarak başlatılıyor.")
         return {}
 
+# JSON dosyasına veri kaydet
+def json_kaydet(dosya_adi, veri):
+    try:
+        with open(dosya_adi, "w", encoding="utf-8") as f:
+            json.dump(veri, f, ensure_ascii=False, indent=4)
+    except Exception as e:
+        print(Fore.RED + f"{dosya_adi} dosyasına kaydederken hata: {e}")
+
 python_komutlari = json_oku("py_kodları.json")
 python_araclari = json_oku("py_araçları.json")
 
 def sifre_kontrol():
     for hak in range(3):
         girilen = input(Fore.YELLOW + "Lütfen şifreni gir: ")
-        if girilen == SIFRE:+!!!+_
+        if girilen == SIFRE:
             print(Fore.GREEN + "Giriş başarılı! Hoş geldin.")
             return True
         else:
@@ -95,9 +103,11 @@ def main():
                     ornek = ornek.strip()
                     if kategori == "python":
                         python_komutlari[komut] = {"aciklama": aciklama, "ornek": ornek, "kategori": "öğretilen"}
+                        json_kaydet("py_kodları.json", python_komutlari)
                         print(Fore.GREEN + f"'{komut}' Python komutu olarak eklendi.")
                     elif kategori in ("araç", "arac"):
                         python_araclari[komut] = {"aciklama": aciklama, "ornek": ornek}
+                        json_kaydet("py_araçları.json", python_araclari)
                         print(Fore.GREEN + f"'{komut}' araç olarak eklendi.")
                     else:
                         print(Fore.RED + "Geçersiz kategori. python veya araç kullan.")
