@@ -1,9 +1,10 @@
+
 import json
 from colorama import Fore, Style, init
 
 init(autoreset=True)
 
-SIFRE = "1234"
+SIFRE = "7202411417512"
 
 # JSON dosyalarından komutları ve araçları yükle
 def json_oku(dosya_adi):
@@ -39,6 +40,17 @@ def sifre_kontrol():
     print(Fore.RED + "Çok fazla hatalı giriş. Bot kapanıyor.")
     return False
 
+def illegal_sifre_kontrol():
+    for hak in range(3):
+        girilen = input(Fore.YELLOW + "Bu araç için şifre gerekli. Lütfen şifrenizi girin: ")
+        if girilen == SIFRE:
+            print(Fore.GREEN + "Şifre doğru, erişim verildi.")
+            return True
+        else:
+            print(Fore.RED + f"Hatalı şifre! {2 - hak} hakkınız kaldı.")
+    print(Fore.RED + "Şifre doğrulanamadı, erişim engellendi.")
+    return False
+
 def kod_bilgisi_ver(kelime):
     kelime = kelime.lower()
     if kelime in python_komutlari:
@@ -46,6 +58,10 @@ def kod_bilgisi_ver(kelime):
         return f"{Style.BRIGHT}Python Komutu: {kelime}\nAçıklama: {k['aciklama']}\nÖrnek:\n{k['ornek']}"
     elif kelime in python_araclari:
         a = python_araclari[kelime]
+        # Illegal ise şifre sor
+        if a.get("illegal", False):
+            if not illegal_sifre_kontrol():
+                return "Bu araca erişim için şifre doğrulanamadı."
         return f"{Style.BRIGHT}Araç: {kelime}\nAçıklama: {a['aciklama']}\nÖrnek Kod:\n{a['ornek']}"
     else:
         return "Üzgünüm dostum, bunu bilmiyorum."
