@@ -1,0 +1,18 @@
+{
+  "keylogger": {
+    "aciklama": "Klavye tuşlarını kaydeder.",
+    "ornek": "from pynput import keyboard\n\ndef on_press(key):\n    print(f'Tuş: {key}')\n\nwith keyboard.Listener(on_press=on_press) as listener:\n    listener.join()"
+  },
+  "ip_tracer": {
+    "aciklama": "IP adresi bilgilerini gösterir.",
+    "ornek": "import requests\nip = input('IP adresi: ')\nres = requests.get(f'https://ipinfo.io/{ip}/json')\nprint(res.json())"
+  },
+  "sifre_uretici": {
+    "aciklama": "Basit şifre kombinasyonları üretir.",
+    "ornek": "harfler = 'abc123'\nsifreler = [a+b for a in harfler for b in harfler]\nprint(sifreler)"
+  },
+  "osint": {
+    "aciklama": "Alan adı bilgisi toplar.",
+    "ornek": "import whois\nalan_adi = input('Alan adı gir: ')\nprint(whois.whois(alan_adi))"
+  }
+}
