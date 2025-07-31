@@ -1,0 +1,54 @@
+{
+  "variables": {
+    "aciklama": "Değişkenler veri saklamak için kullanılır.",
+    "ornek": "x = 10\nisim = 'Demir'"
+  },
+  "input": {
+    "aciklama": "Kullanıcıdan veri almak için kullanılır.",
+    "ornek": "isim = input('Adınız ne? ')"
+  },
+  "print": {
+    "aciklama": "Ekrana çıktı vermek için kullanılır.",
+    "ornek": "print('Merhaba, Dünya!')"
+  },
+  "if": {
+    "aciklama": "Koşul belirtmek için kullanılır.",
+    "ornek": "if x > 5:\n    print('x 5\'ten büyük')"
+  },
+  "for": {
+    "aciklama": "Döngü kurmak için kullanılır.",
+    "ornek": "for i in range(5):\n    print(i)"
+  },
+  "while": {
+    "aciklama": "Koşul sağlandığı sürece döngü devam eder.",
+    "ornek": "while sayac < 5:\n    print(sayac)\n    sayac += 1"
+  },
+  "def": {
+    "aciklama": "Fonksiyon tanımlamak için kullanılır.",
+    "ornek": "def topla(a, b):\n    return a + b"
+  },
+  "class": {
+    "aciklama": "Sınıf tanımlamak için kullanılır (nesne yönelimli programlama).",
+    "ornek": "class Araba:\n    def __init__(self, model):\n        self.model = model"
+  },
+  "try-except": {
+    "aciklama": "Hata yakalamak için kullanılır.",
+    "ornek": "try:\n    x = 10 / 0\nexcept ZeroDivisionError:\n    print('Sıfıra bölme hatası')"
+  },
+  "list": {
+    "aciklama": "Birden fazla veriyi sıralı saklamak için kullanılır.",
+    "ornek": "meyveler = ['elma', 'armut', 'muz']"
+  },
+  "dict": {
+    "aciklama": "Anahtar-değer çiftleri saklamak için kullanılır.",
+    "ornek": "kisiler = {'isim': 'Ali', 'yas': 30}"
+  },
+  "import": {
+    "aciklama": "Dış modülleri programa dahil etmek için kullanılır.",
+    "ornek": "import math"
+  },
+  "lambda": {
+    "aciklama": "Anonim fonksiyon tanımlamak için kullanılır.",
+    "ornek": "kare = lambda x: x * x\nprint(kare(5))"
+  }
+}
