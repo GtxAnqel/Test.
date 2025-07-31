@@ -1,1 +1,727 @@
+{
+  "input": {
+    "aciklama": "Kullanıcıdan veri almak için kullanılır.",
+    "ornek": "isim = input('Adın ne?')",
+    "kategori": "girdi"
+  },
+  "print": {
+    "aciklama": "Ekrana veri yazdırmak için kullanılır.",
+    "ornek": "print('Merhaba Dünya!')",
+    "kategori": "çıktı"
+  },
+  "if": {
+    "aciklama": "Koşullu ifade belirtmek için kullanılır.",
+    "ornek": "if x > 0:\n    print('Pozitif')",
+    "kategori": "kontrol yapısı"
+  },
+  "elif": {
+    "aciklama": "Başka bir koşul belirtmek için if’ten sonra kullanılır.",
+    "ornek": "if x > 0:\n    print('Pozitif')\nelif x == 0:\n    print('Sıfır')",
+    "kategori": "kontrol yapısı"
+  },
+  "else": {
+    "aciklama": "Hiçbir koşul sağlanmazsa çalışır.",
+    "ornek": "if x > 0:\n    print('Pozitif')\nelse:\n    print('Negatif veya sıfır')",
+    "kategori": "kontrol yapısı"
+  },
+  "for": {
+    "aciklama": "Belirli bir aralıkta döngü kurmak için kullanılır.",
+    "ornek": "for i in range(5):\n    print(i)",
+    "kategori": "döngü"
+  },
+  "while": {
+    "aciklama": "Belirli bir koşul doğru olduğu sürece döngü kurar.",
+    "ornek": "while x < 5:\n    print(x)\n    x += 1",
+    "kategori": "döngü"
+  },
+  "break": {
+    "aciklama": "Döngüyü sonlandırmak için kullanılır.",
+    "ornek": "for i in range(10):\n    if i == 5:\n        break",
+    "kategori": "döngü kontrol"
+  },
+  "continue": {
+    "aciklama": "Döngünün sonraki adımına geçmek için kullanılır.",
+    "ornek": "for i in range(5):\n    if i == 2:\n        continue\n    print(i)",
+    "kategori": "döngü kontrol"
+  },
+  "def": {
+    "aciklama": "Fonksiyon tanımlamak için kullanılır.",
+    "ornek": "def selamla():\n    print('Merhaba')",
+    "kategori": "fonksiyon"
+  },
+  "return": {
+    "aciklama": "Fonksiyondan değer döndürmek için kullanılır.",
+    "ornek": "def kare(x):\n    return x * x",
+    "kategori": "fonksiyon"
+  },
+  "lambda": {
+    "aciklama": "Anonim (isimsiz) fonksiyon tanımlamak için kullanılır.",
+    "ornek": "kare = lambda x: x * x",
+    "kategori": "fonksiyon"
+  },
+  "import": {
+    "aciklama": "Bir modül veya kütüphaneyi içeri aktarmak için kullanılır.",
+    "ornek": "import math",
+    "kategori": "modül"
+  },
+  "from": {
+    "aciklama": "Belirli bir modülden sadece bir kısmını almak için kullanılır.",
+    "ornek": "from math import sqrt",
+    "kategori": "modül"
+  },
+  "as": {
+    "aciklama": "Bir modüle veya fonksiyona takma ad vermek için kullanılır.",
+    "ornek": "import numpy as np",
+    "kategori": "modül"
+  },
+  "try": {
+    "aciklama": "Hata alabilecek kodları denemek için kullanılır.",
+    "ornek": "try:\n    x = 5 / 0",
+    "kategori": "hata yönetimi"
+  },
+  "except": {
+    "aciklama": "Hata oluşursa yapılacak işlemleri belirtir.",
+    "ornek": "except ZeroDivisionError:\n    print('Sıfıra bölünemez!')",
+    "kategori": "hata yönetimi"
+  },
+  "finally": {
+    "aciklama": "Hata olsa da olmasa da çalışacak bloğu belirtir.",
+    "ornek": "finally:\n    print('Bitti.')",
+    "kategori": "hata yönetimi"
+  },
+  "with": {
+    "aciklama": "Dosya açmak gibi işlemleri güvenli şekilde yapmak için kullanılır.",
+    "ornek": "with open('dosya.txt', 'r') as dosya:\n    icerik = dosya.read()",
+    "kategori": "dosya işlemleri"
+  },
+  "open": {
+    "aciklama": "Dosya açmak için kullanılır.",
+    "ornek": "dosya = open('test.txt', 'w')",
+    "kategori": "dosya işlemleri"
+  },
+  "read": {
+    "aciklama": "Bir dosyayı okumak için kullanılır.",
+    "ornek": "icerik = dosya.read()",
+    "kategori": "dosya işlemleri"
+  },
+  "write": {
+    "aciklama": "Bir dosyaya veri yazmak için kullanılır.",
+    "ornek": "dosya.write('Merhaba')",
+    "kategori": "dosya işlemleri"
+  },
+  "close": {
+    "aciklama": "Açılan dosyayı kapatmak için kullanılır.",
+    "ornek": "dosya.close()",
+    "kategori": "dosya işlemleri"
+  }
 
+  "int": {
+    "aciklama": "Tam sayı veri tipidir.",
+    "ornek": "x = 5",
+    "kategori": "veri tipi"
+  },
+  "float": {
+    "aciklama": "Ondalıklı sayı veri tipidir.",
+    "ornek": "pi = 3.14",
+    "kategori": "veri tipi"
+  },
+  "str": {
+    "aciklama": "Metin (string) veri tipidir.",
+    "ornek": "ad = 'Ahmet'",
+    "kategori": "veri tipi"
+  },
+  "bool": {
+    "aciklama": "Mantıksal (True/False) veri tipidir.",
+    "ornek": "aktif = True",
+    "kategori": "veri tipi"
+  },
+  "list": {
+    "aciklama": "Birden fazla öğeyi sıralı şekilde tutan veri yapısıdır.",
+    "ornek": "meyveler = ['elma', 'armut', 'muz']",
+    "kategori": "veri yapısı"
+  },
+  "tuple": {
+    "aciklama": "Değiştirilemeyen sıralı veri yapısıdır.",
+    "ornek": "koordinat = (10, 20)",
+    "kategori": "veri yapısı"
+  },
+  "set": {
+    "aciklama": "Tekil (aynı eleman bir kere geçer) ve sırasız veri yapısıdır.",
+    "ornek": "renkler = {'kırmızı', 'yeşil', 'mavi'}",
+    "kategori": "veri yapısı"
+  },
+  "dict": {
+    "aciklama": "Anahtar-değer çiftlerinden oluşan veri yapısıdır.",
+    "ornek": "kisi = {'ad': 'Ali', 'yas': 25}",
+    "kategori": "veri yapısı"
+  },
+  "len": {
+    "aciklama": "Bir koleksiyonun uzunluğunu verir.",
+    "ornek": "len([1, 2, 3])",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "type": {
+    "aciklama": "Bir değişkenin veri tipini verir.",
+    "ornek": "type(3.14)",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "range": {
+    "aciklama": "Belirli aralıkta sayı üretir, genellikle döngülerde kullanılır.",
+    "ornek": "for i in range(10):\n    print(i)",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "enumerate": {
+    "aciklama": "Bir listedeki elemanlara indeksleriyle birlikte erişmeyi sağlar.",
+    "ornek": "for i, deger in enumerate(['a', 'b', 'c']):\n    print(i, deger)",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "zip": {
+    "aciklama": "İki veya daha fazla listeyi eşleştirerek birlikte döndürür.",
+    "ornek": "for ad, yas in zip(adlar, yaslar):\n    print(ad, yas)",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "map": {
+    "aciklama": "Her öğeye bir fonksiyonu uygulamak için kullanılır.",
+    "ornek": "list(map(str, [1, 2, 3]))",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "filter": {
+    "aciklama": "Bir koşula göre öğeleri filtreler.",
+    "ornek": "list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4]))",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "reduce": {
+    "aciklama": "Bir listeyi tek bir değere indirger. functools modülünden import edilir.",
+    "ornek": "from functools import reduce\nreduce(lambda x, y: x + y, [1, 2, 3])",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "any": {
+    "aciklama": "Bir koleksiyonda en az bir doğru değer varsa True döner.",
+    "ornek": "any([False, True, False])",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "all": {
+    "aciklama": "Tüm değerler doğruysa True döner.",
+    "ornek": "all([True, True, True])",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "max": {
+    "aciklama": "Bir dizideki en büyük değeri bulur.",
+    "ornek": "max([3, 8, 1])",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "min": {
+    "aciklama": "Bir dizideki en küçük değeri bulur.",
+    "ornek": "min([3, 8, 1])",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "sum": {
+    "aciklama": "Bir dizi veya liste içindeki sayıları toplar.",
+    "ornek": "sum([1, 2, 3])",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "sorted": {
+    "aciklama": "Bir listeyi sıralar, orijinal listeyi değiştirmez.",
+    "ornek": "sorted([3, 1, 2])",
+    "kategori": "yerleşik fonksiyon"
+  }
+
+  "id": {
+    "aciklama": "Bir nesnenin benzersiz kimliğini döndürür.",
+    "ornek": "a = 10\nprint(id(a))",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "hash": {
+    "aciklama": "Bir nesnenin hash değerini döndürür.",
+    "ornek": "print(hash('hello'))",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "eval": {
+    "aciklama": "Bir Python ifadesini çalıştırır.",
+    "ornek": "x = 1\ny = 2\nprint(eval('x + y'))",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "exec": {
+    "aciklama": "Bir Python kod bloğunu çalıştırır.",
+    "ornek": "exec('for i in range(3): print(i)')",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "globals": {
+    "aciklama": "Global değişkenleri sözlük olarak döndürür.",
+    "ornek": "print(globals())",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "locals": {
+    "aciklama": "Yerel değişkenleri sözlük olarak döndürür.",
+    "ornek": "def fonk():\n    x = 10\n    print(locals())\nfonk()",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "callable": {
+    "aciklama": "Bir nesnenin çağrılabilir olup olmadığını kontrol eder.",
+    "ornek": "def a(): pass\nprint(callable(a))",
+    "kategori": "yerleşik fonksiyon"
+  },
+  "isinstance": {
+    "aciklama": "Bir nesnenin belirtilen sınıfa ait olup olmadığını kontrol eder.",
+    "ornek": "print(isinstance(5, int))",
+    "kategori": "tip kontrol"
+  },
+  "issubclass": {
+    "aciklama": "Bir sınıfın başka bir sınıfın alt sınıfı olup olmadığını kontrol eder.",
+    "ornek": "class A: pass\nclass B(A): pass\nprint(issubclass(B, A))",
+    "kategori": "tip kontrol"
+  },
+  "dir": {
+    "aciklama": "Bir nesnenin tüm niteliklerini ve metodlarını listeler.",
+    "ornek": "print(dir(str))",
+    "kategori": "yardımcı fonksiyon"
+  },
+  "help": {
+    "aciklama": "Python yardım sistemini başlatır.",
+    "ornek": "help(str)",
+    "kategori": "yardımcı fonksiyon"
+  },
+  "reversed": {
+    "aciklama": "Bir diziyi tersine çevirir.",
+    "ornek": "print(list(reversed([1, 2, 3])))",
+    "kategori": "liste işlemi"
+  },
+  "zip": {
+    "aciklama": "İki veya daha fazla listeyi eşleştirir.",
+    "ornek": "a = [1, 2]\nb = ['a', 'b']\nprint(list(zip(a, b)))",
+    "kategori": "liste işlemi"
+  },
+  "enumerate": {
+    "aciklama": "Bir listedeki elemanları indeksleri ile döner.",
+    "ornek": "for i, val in enumerate(['a', 'b']):\n    print(i, val)",
+    "kategori": "liste işlemi"
+  },
+  "all": {
+    "aciklama": "Tüm elemanlar doğruysa True döner.",
+    "ornek": "print(all([True, True, False]))",
+    "kategori": "mantık"
+  },
+  "any": {
+    "aciklama": "En az bir eleman doğruysa True döner.",
+    "ornek": "print(any([False, False, True]))",
+    "kategori": "mantık"
+  },
+  "bin": {
+    "aciklama": "Tam sayıyı ikili (binary) biçime çevirir.",
+    "ornek": "print(bin(10))",
+    "kategori": "sayı"
+  },
+  "oct": {
+    "aciklama": "Tam sayıyı sekizli (octal) biçime çevirir.",
+    "ornek": "print(oct(10))",
+    "kategori": "sayı"
+  },
+  "hex": {
+    "aciklama": "Tam sayıyı onaltılı (hexadecimal) biçime çevirir.",
+    "ornek": "print(hex(10))",
+    "kategori": "sayı"
+  },
+  "round": {
+    "aciklama": "Bir ondalık sayıyı belirtilen basamağa yuvarlar.",
+    "ornek": "print(round(3.14159, 2))",
+    "kategori": "sayı"
+  },
+  "abs": {
+    "aciklama": "Mutlak değer döner.",
+    "ornek": "print(abs(-7))",
+    "kategori": "sayı"
+  },
+  "pow": {
+    "aciklama": "Üs alma işlemi yapar.",
+    "ornek": "print(pow(2, 3))",
+    "kategori": "sayı"
+  },
+  "divmod": {
+    "aciklama": "Bölme ve kalanı birlikte döner.",
+    "ornek": "print(divmod(7, 3))",
+    "kategori": "sayı"
+  },
+  "sorted": {
+    "aciklama": "Bir listeyi sıralar.",
+    "ornek": "print(sorted([3, 1, 2]))",
+    "kategori": "liste"
+  },
+  "filter": {
+    "aciklama": "Bir koşula göre elemanları filtreler.",
+    "ornek": "def pozitif(x): return x > 0\nprint(list(filter(pozitif, [-1, 2, 3, -5])))",
+    "kategori": "liste"
+  },
+  "map": {
+    "aciklama": "Bir işlevi listedeki tüm öğelere uygular.",
+    "ornek": "print(list(map(lambda x: x*2, [1, 2, 3])))",
+    "kategori": "liste"
+  },
+  "reduce": {
+    "aciklama": "Bir işlevi kullanarak listedeki elemanları tek bir değerde toplar.",
+    "ornek": "from functools import reduce\nprint(reduce(lambda x, y: x + y, [1, 2, 3]))",
+    "kategori": "liste"
+  },
+  "lambda": {
+    "aciklama": "İsimsiz fonksiyon oluşturmak için kullanılır.",
+    "ornek": "kare = lambda x: x * x\nprint(kare(5))",
+    "kategori": "fonksiyon"
+  }
+
+  "assert": {
+    "aciklama": "Bir ifadenin doğru olduğunu kontrol eder, aksi halde hata fırlatır.",
+    "ornek": "assert 2 + 2 == 4",
+    "kategori": "hata kontrol"
+  },
+  "try": {
+    "aciklama": "Hata yakalama bloğu başlatır.",
+    "ornek": "try:\n    print(1/0)\nexcept ZeroDivisionError:\n    print('Sıfıra bölünemez')",
+    "kategori": "hata kontrol"
+  },
+  "except": {
+    "aciklama": "try bloğundaki hataları yakalar.",
+    "ornek": "try:\n    a = int('a')\nexcept ValueError:\n    print('Geçersiz sayı')",
+    "kategori": "hata kontrol"
+  },
+  "finally": {
+    "aciklama": "try bloğu sonunda her durumda çalışır.",
+    "ornek": "try:\n    print('deneme')\nfinally:\n    print('temizlik yapılıyor')",
+    "kategori": "hata kontrol"
+  },
+  "raise": {
+    "aciklama": "Manuel olarak hata fırlatır.",
+    "ornek": "raise ValueError('Geçersiz değer')",
+    "kategori": "hata kontrol"
+  },
+  "with": {
+    "aciklama": "Dosya gibi kaynakları otomatik yönetmek için kullanılır.",
+    "ornek": "with open('dosya.txt', 'r') as f:\n    veri = f.read()",
+    "kategori": "dosya işlemleri"
+  },
+  "open": {
+    "aciklama": "Dosya açmak için kullanılır.",
+    "ornek": "f = open('dosya.txt', 'r')\nicerik = f.read()\nf.close()",
+    "kategori": "dosya işlemleri"
+  },
+  "read": {
+    "aciklama": "Dosya içeriğini okur.",
+    "ornek": "f = open('dosya.txt')\nprint(f.read())",
+    "kategori": "dosya işlemleri"
+  },
+  "write": {
+    "aciklama": "Dosyaya veri yazar.",
+    "ornek": "f = open('dosya.txt', 'w')\nf.write('Merhaba')\nf.close()",
+    "kategori": "dosya işlemleri"
+  },
+  "append": {
+    "aciklama": "Listeye öğe ekler.",
+    "ornek": "liste = [1, 2]\nliste.append(3)",
+    "kategori": "liste"
+  },
+  "extend": {
+    "aciklama": "Bir listeyi başka bir liste ile genişletir.",
+    "ornek": "a = [1, 2]\na.extend([3, 4])",
+    "kategori": "liste"
+  },
+  "insert": {
+    "aciklama": "Listeye belirli konuma öğe ekler.",
+    "ornek": "a = [1, 3]\na.insert(1, 2)",
+    "kategori": "liste"
+  },
+  "remove": {
+    "aciklama": "Belirli bir öğeyi listeden çıkarır.",
+    "ornek": "a = [1, 2, 3]\na.remove(2)",
+    "kategori": "liste"
+  },
+  "pop": {
+    "aciklama": "Belirtilen konumdaki öğeyi listeden çıkarır ve döner.",
+    "ornek": "a = [1, 2, 3]\na.pop(1)",
+    "kategori": "liste"
+  },
+  "clear": {
+    "aciklama": "Listenin tüm öğelerini siler.",
+    "ornek": "a = [1, 2, 3]\na.clear()",
+    "kategori": "liste"
+  },
+  "index": {
+    "aciklama": "Bir öğenin listedeki indeksini döner.",
+    "ornek": "a = [1, 2, 3]\nprint(a.index(2))",
+    "kategori": "liste"
+  },
+  "count": {
+    "aciklama": "Belirli bir öğenin listede kaç kez geçtiğini döner.",
+    "ornek": "a = [1, 2, 2, 3]\nprint(a.count(2))",
+    "kategori": "liste"
+  },
+  "sort": {
+    "aciklama": "Listeyi sıralar.",
+    "ornek": "a = [3, 1, 2]\na.sort()",
+    "kategori": "liste"
+  },
+  "reverse": {
+    "aciklama": "Listenin öğelerini ters çevirir.",
+    "ornek": "a = [1, 2, 3]\na.reverse()",
+    "kategori": "liste"
+  },
+  "set": {
+    "aciklama": "Benzersiz öğeleri tutan bir küme oluşturur.",
+    "ornek": "kume = set([1, 2, 2, 3])",
+    "kategori": "kümeler"
+  },
+  "add": {
+    "aciklama": "Kümeye bir öğe ekler.",
+    "ornek": "k = set()\nk.add(1)",
+    "kategori": "kümeler"
+  },
+  "update": {
+    "aciklama": "Bir küme içine birden fazla öğe ekler.",
+    "ornek": "k = set([1])\nk.update([2, 3])",
+    "kategori": "kümeler"
+  },
+  "discard": {
+    "aciklama": "Kümeden belirtilen öğeyi siler (yoksa hata vermez).",
+    "ornek": "k = set([1, 2])\nk.discard(2)",
+    "kategori": "kümeler"
+  },
+  "remove (set)": {
+    "aciklama": "Kümeden belirtilen öğeyi siler (yoksa hata verir).",
+    "ornek": "k = set([1, 2])\nk.remove(2)",
+    "kategori": "kümeler"
+  },
+  "union": {
+    "aciklama": "İki kümenin birleşimini döner.",
+    "ornek": "a = {1, 2}\nb = {2, 3}\nprint(a.union(b))",
+    "kategori": "kümeler"
+  },
+  "intersection": {
+    "aciklama": "İki kümenin kesişimini döner.",
+    "ornek": "a = {1, 2}\nb = {2, 3}\nprint(a.intersection(b))",
+    "kategori": "kümeler"
+  },
+  "difference": {
+    "aciklama": "Bir kümeden diğer kümenin farkını alır.",
+    "ornek": "a = {1, 2, 3}\nb = {2, 3}\nprint(a.difference(b))",
+    "kategori": "kümeler"
+  },
+  "symmetric_difference": {
+    "aciklama": "İki kümenin farklarının birleşimini alır.",
+    "ornek": "a = {1, 2}\nb = {2, 3}\nprint(a.symmetric_difference(b))",
+    "kategori": "kümeler"
+  },
+  "frozenset": {
+    "aciklama": "Değiştirilemez bir küme oluşturur.",
+    "ornek": "f = frozenset([1, 2, 3])",
+    "kategori": "kümeler"
+  }
+} 
+{
+  "dict": {
+    "aciklama": "Anahtar-değer çiftlerinden oluşan veri yapısıdır.",
+    "ornek": "bilgi = {'ad': 'Ali', 'yas': 25}",
+    "kategori": "sözlük"
+  },
+  "keys": {
+    "aciklama": "Sözlüğün anahtarlarını döner.",
+    "ornek": "bilgi = {'ad': 'Ali'}\nprint(bilgi.keys())",
+    "kategori": "sözlük"
+  },
+  "values": {
+    "aciklama": "Sözlüğün değerlerini döner.",
+    "ornek": "bilgi = {'ad': 'Ali'}\nprint(bilgi.values())",
+    "kategori": "sözlük"
+  },
+  "items": {
+    "aciklama": "Sözlüğün anahtar-değer çiftlerini döner.",
+    "ornek": "bilgi = {'ad': 'Ali'}\nprint(bilgi.items())",
+    "kategori": "sözlük"
+  },
+  "get": {
+    "aciklama": "Anahtar varsa değerini, yoksa varsayılan değeri döner.",
+    "ornek": "bilgi = {'ad': 'Ali'}\nprint(bilgi.get('yas', 0))",
+    "kategori": "sözlük"
+  },
+  "update (dict)": {
+    "aciklama": "Sözlüğü başka sözlükle günceller.",
+    "ornek": "bilgi = {'ad': 'Ali'}\nbilgi.update({'yas': 25})",
+    "kategori": "sözlük"
+  },
+  "pop (dict)": {
+    "aciklama": "Belirtilen anahtarı sözlükten siler ve değerini döner.",
+    "ornek": "bilgi = {'ad': 'Ali'}\nbilgi.pop('ad')",
+    "kategori": "sözlük"
+  },
+  "del": {
+    "aciklama": "Bir nesneyi veya öğeyi silmek için kullanılır.",
+    "ornek": "a = [1, 2, 3]\ndel a[1]",
+    "kategori": "genel"
+  },
+  "len": {
+    "aciklama": "Bir nesnenin uzunluğunu döner.",
+    "ornek": "len([1, 2, 3])",
+    "kategori": "genel"
+  },
+  "type": {
+    "aciklama": "Veri tipini verir.",
+    "ornek": "type(3.14)",
+    "kategori": "genel"
+  },
+  "isinstance": {
+    "aciklama": "Bir nesnenin belirli bir sınıftan olup olmadığını kontrol eder.",
+    "ornek": "isinstance(5, int)",
+    "kategori": "genel"
+  },
+  "enumerate": {
+    "aciklama": "Döngüde hem index hem de değeri verir.",
+    "ornek": "for i, v in enumerate(['a', 'b']): print(i, v)",
+    "kategori": "döngü"
+  },
+  "zip": {
+    "aciklama": "İki listeyi birleştirir.",
+    "ornek": "list(zip([1,2], ['a','b']))",
+    "kategori": "genel"
+  },
+  "map": {
+    "aciklama": "Bir fonksiyonu listedeki her elemana uygular.",
+    "ornek": "list(map(str, [1, 2, 3]))",
+    "kategori": "fonksiyonel"
+  },
+  "filter": {
+    "aciklama": "Bir filtre fonksiyonu ile elemanları seçer.",
+    "ornek": "list(filter(lambda x: x>0, [-1, 2, 0]))",
+    "kategori": "fonksiyonel"
+  },
+  "lambda": {
+    "aciklama": "Tek satırlık anonim fonksiyon tanımlar.",
+    "ornek": "kare = lambda x: x*x",
+    "kategori": "fonksiyonel"
+  },
+  "any": {
+    "aciklama": "Listede herhangi bir eleman True ise True döner.",
+    "ornek": "any([False, True])",
+    "kategori": "genel"
+  },
+  "all": {
+    "aciklama": "Tüm elemanlar True ise True döner.",
+    "ornek": "all([True, True])",
+    "kategori": "genel"
+  },
+  "min": {
+    "aciklama": "En küçük değeri döner.",
+    "ornek": "min([3, 1, 2])",
+    "kategori": "genel"
+  },
+  "max": {
+    "aciklama": "En büyük değeri döner.",
+    "ornek": "max([3, 1, 2])",
+    "kategori": "genel"
+  },
+  "sum": {
+    "aciklama": "Toplam değeri verir.",
+    "ornek": "sum([1, 2, 3])",
+    "kategori": "genel"
+  },
+  "round": {
+    "aciklama": "Ondalık sayıyı yuvarlar.",
+    "ornek": "round(3.14159, 2)",
+    "kategori": "matematik"
+  },
+  "abs": {
+    "aciklama": "Mutlak değeri verir.",
+    "ornek": "abs(-5)",
+    "kategori": "matematik"
+  },
+  "divmod": {
+    "aciklama": "Bölüm ve kalanı birlikte verir.",
+    "ornek": "divmod(10, 3)",
+    "kategori": "matematik"
+  },
+  "pow": {
+    "aciklama": "Üs alma işlemi yapar.",
+    "ornek": "pow(2, 3)",
+    "kategori": "matematik"
+  },
+  "bin": {
+    "aciklama": "Tam sayıyı ikili (binary) sisteme çevirir.",
+    "ornek": "bin(10)",
+    "kategori": "dönüştürme"
+  },
+  "hex": {
+    "aciklama": "Tam sayıyı onaltılık (hex) sisteme çevirir.",
+    "ornek": "hex(255)",
+    "kategori": "dönüştürme"
+  },
+  "oct": {
+    "aciklama": "Tam sayıyı sekizlik (octal) sisteme çevirir.",
+    "ornek": "oct(8)",
+    "kategori": "dönüştürme"
+  },
+  "eval": {
+    "aciklama": "Bir Python ifadesini çalıştırır.",
+    "ornek": "eval('2 + 3')",
+    "kategori": "güvenlik / gelişmiş"
+  },
+  "exec": {
+    "aciklama": "Bir Python komutunu çalıştırır.",
+    "ornek": "exec('for i in range(3): print(i)')",
+    "kategori": "güvenlik / gelişmiş"
+  },
+  "globals": {
+    "aciklama": "Global isim alanını verir.",
+    "ornek": "print(globals())",
+    "kategori": "gelişmiş"
+  },
+  "locals": {
+    "aciklama": "Yerel isim alanını verir.",
+    "ornek": "print(locals())",
+    "kategori": "gelişmiş"
+  },
+  "help": {
+    "aciklama": "Yardım dokümantasyonunu gösterir.",
+    "ornek": "help(str)",
+    "kategori": "yardım"
+  },
+  "dir": {
+    "aciklama": "Bir nesnedeki tüm nitelikleri listeler.",
+    "ornek": "dir(list)",
+    "kategori": "yardım"
+  {
+  "pass": {
+    "aciklama": "Hiçbir işlem yapmaz, boş bırakmak için kullanılır.",
+    "ornek": "if x > 0:\n    pass  # Henüz yapılacak bir şey yok"
+  },
+  "raise": {
+    "aciklama": "Hata fırlatmak için kullanılır.",
+    "ornek": "raise ValueError('Geçersiz değer!')"
+  },
+  "try": {
+    "aciklama": "Hata yakalamak için kullanılır.",
+    "ornek": "try:\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print('Sıfıra bölme hatası')"
+  },
+  "except": {
+    "aciklama": "try bloğundaki hataları yakalamak için kullanılır.",
+    "ornek": "try:\n    ...\nexcept ValueError:\n    print('Hata oluştu')"
+  },
+  "finally": {
+    "aciklama": "try-except sonunda mutlaka çalışacak kod bloğu.",
+    "ornek": "try:\n    ...\nfinally:\n    print('Her zaman çalışır')"
+  },
+  "with": {
+    "aciklama": "Dosya işlemlerinde veya context yönetiminde kullanılır.",
+    "ornek": "with open('dosya.txt') as f:\n    veri = f.read()"
+  },
+  "lambda": {
+    "aciklama": "Anonim fonksiyon tanımlamak için kullanılır.",
+    "ornek": "topla = lambda x, y: x + y\nprint(topla(3, 4))"
+  },
+  "list comprehension": {
+    "aciklama": "Liste oluşturmak için kısa ve etkili yöntem.",
+    "ornek": "kareler = [x**2 for x in range(5)]\nprint(kareler)"
+  },
+  "dict comprehension": {
+    "aciklama": "Sözlük oluşturmak için kısa ve etkili yöntem.",
+    "ornek": "kare_dict = {x: x**2 for x in range(5)}\nprint(kare_dict)"
+  },
+  "set comprehension": {
+    "aciklama": "Küme oluşturmak için kısa ve etkili yöntem.",
+    "ornek": "kume = {x for x in range(5)}\nprint(kume)"
+  }
+}
